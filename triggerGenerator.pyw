@@ -5,11 +5,11 @@ from tkinter import ttk
 # == magic
 
 def frame1GeneratorCommand():
-    triggercommand1.configure(text="REPLACE INTO`cestra_game`.`scripted_cells` (`MapID`, `CellID`, `ActionID`, `EventID`, `ActionsArgs`, `Conditions`) VALUES ('{}', '{}', '0', '1', '{},{}', '-1');".format(F1EntryMap1.get(), F1EntryCellin1.get(), F1EntryMap2.get(),F1EntryCellout2.get()))
-    triggercommand2.configure(text="REPLACE INTO`cestra_game`.`scripted_cells` (`MapID`, `CellID`, `ActionID`, `EventID`, `ActionsArgs`, `Conditions`) VALUES ('{}', '{}', '0', '1', '{},{}', '-1');".format(F1EntryMap2.get(), F1EntryCellin2.get(), F1EntryMap1.get(),F1EntryCellout1.get()))
+    triggercommand1.configure(text="REPLACE INTO `scripted_cells` (`MapID`, `CellID`, `ActionID`, `EventID`, `ActionsArgs`, `Conditions`) VALUES ('{}', '{}', '0', '1', '{},{}', '-1');".format(F1EntryMap1.get(), F1EntryCellin1.get(), F1EntryMap2.get(),F1EntryCellout2.get()))
+    triggercommand2.configure(text="REPLACE INTO `scripted_cells` (`MapID`, `CellID`, `ActionID`, `EventID`, `ActionsArgs`, `Conditions`) VALUES ('{}', '{}', '0', '1', '{},{}', '-1');".format(F1EntryMap2.get(), F1EntryCellin2.get(), F1EntryMap1.get(),F1EntryCellout1.get()))
 
 def frame2GeneratorCommand():
-    triggercommand3.configure(text="REPLACE INTO`cestra_game`.`scripted_cells` (`MapID`, `CellID`, `ActionID`, `EventID`, `ActionsArgs`, `Conditions`) VALUES ('{}', '{}', '0', '1', '{},{}', '-1');".format(F2EntryMap1.get(), F2EntryCellin1.get(), F2EntryMap2.get(),F2EntryCellout2.get()))
+    triggercommand3.configure(text="REPLACE INTO `scripted_cells` (`MapID`, `CellID`, `ActionID`, `EventID`, `ActionsArgs`, `Conditions`) VALUES ('{}', '{}', '0', '1', '{},{}', '-1');".format(F2EntryMap1.get(), F2EntryCellin1.get(), F2EntryMap2.get(),F2EntryCellout2.get()))
 
 def frame1Copy1():
     frame1.clipboard_clear()
@@ -48,13 +48,13 @@ tkLabelTop.place(x=10, y=185)
 # ======================================================================
 # == Description Labes == Frame 1
 
-descriptionLabe1 = tk.Label(frame1,text="MAP-ID")
+descriptionLabe1 = tk.Label(frame1,text="MAP-ID", font="Helvetica 10 bold", fg="#6699cc",)
 descriptionLabe1.grid(column=1, row=0,padx=2 ,pady=5, sticky="s")
 
-descriptionLabe2 = tk.Label(frame1,text="Cell-IN")
+descriptionLabe2 = tk.Label(frame1,text="Cell-IN", font="Helvetica 10 bold", fg="#ff6633")
 descriptionLabe2.grid(column=2, row=0,padx=2 ,pady=5)
 
-descriptionLabe3 = tk.Label(frame1,text="Cell-OUT")
+descriptionLabe3 = tk.Label(frame1,text="Cell-OUT", font="Helvetica 10 bold", fg="#ff9933")
 descriptionLabe3.grid(column=3, row=0,padx=2 ,pady=5)
 
 descriptionLabe4 = tk.Label(frame1,text="Map 1")
@@ -83,23 +83,23 @@ descriptionLabe5.grid(column=0, row=2,padx=10 ,pady=2)
 # ======================================================================
 # == Entrys == Frame 1
 
-F1EntryMap1 = tk.Entry(frame1)
-F1EntryMap1.grid(column=1, row=1,padx=2 ,pady=2)
+F1EntryMap1 = tk.Entry(frame1, bg="#6699cc", width=10)
+F1EntryMap1.grid(column=1, row=1, padx=2 ,pady=2, sticky="s")
 
-F1EntryCellin1 = tk.Entry(frame1)
-F1EntryCellin1.grid(column=2, row=1,padx=2 ,pady=2)
+F1EntryCellin1 = tk.Entry(frame1, bg="#ff6633", width=10)
+F1EntryCellin1.grid(column=2, row=1, padx=2 ,pady=2)
 
-F1EntryCellout1 = tk.Entry(frame1)
-F1EntryCellout1.grid(column=3, row=1,padx=2 ,pady=2)
+F1EntryCellout1 = tk.Entry(frame1, bg="#ff9933", width=10)
+F1EntryCellout1.grid(column=3, row=1, padx=2 ,pady=2)
 
-F1EntryMap2 = tk.Entry(frame1)
-F1EntryMap2.grid(column=1, row=2,padx=2 ,pady=2)
+F1EntryMap2 = tk.Entry(frame1, bg="#6699cc", width=10)
+F1EntryMap2.grid(column=1, row=2, padx=2 ,pady=2)
 
-F1EntryCellin2 = tk.Entry(frame1)
-F1EntryCellin2.grid(column=2, row=2,padx=2 ,pady=2)
+F1EntryCellin2 = tk.Entry(frame1, bg="#ff6633", width=10)
+F1EntryCellin2.grid(column=2, row=2, padx=2 ,pady=2)
 
-F1EntryCellout2 = tk.Entry(frame1)
-F1EntryCellout2.grid(column=3, row=2,padx=2 ,pady=2)
+F1EntryCellout2 = tk.Entry(frame1, bg="#ff9933", width=10)
+F1EntryCellout2.grid(column=3, row=2, padx=2 ,pady=2)
 
 # == Entrys == Frame 2
 
