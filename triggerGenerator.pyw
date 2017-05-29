@@ -26,6 +26,20 @@ def frame2Copy():
     a = triggercommand3.cget("text")
     frame2.clipboard_append(a)
 
+def F1clearText():
+    F1EntryMap1.delete(0, 'end')
+    F1EntryCellin1.delete(0, 'end')
+    F1EntryCellout1.delete(0, 'end')
+    F1EntryMap2.delete(0, 'end')
+    F1EntryCellin2.delete(0, 'end')
+    F1EntryCellout2.delete(0, 'end')
+
+def F2clearText():
+    F2EntryMap1.delete(0, 'end')
+    F2EntryCellin1.delete(0, 'end')
+    F2EntryMap2.delete(0, 'end')
+    F2EntryCellout2.delete(0, 'end')
+
 # ======================================================================
 # == GUI
 
@@ -43,25 +57,25 @@ notebook.add(frame2, text='    Singel Map    ')
 notebook.place(x=10, y=10)
 
 tkLabelTop = tk.Label(tkTop, text="BroccoliTool 0.2 - https://github.com/The-Broccoli")
-tkLabelTop.place(x=10, y=185)
+tkLabelTop.place(x=10, y=189)
 
 # ======================================================================
 # == Description Labes == Frame 1
 
 descriptionLabe1 = tk.Label(frame1,text="MAP-ID", font="Helvetica 10 bold", fg="#6699cc",)
-descriptionLabe1.grid(column=1, row=0,padx=2 ,pady=5, sticky="s")
+descriptionLabe1.grid(column=1, row=0, padx=15, pady=0, sticky="s")
 
 descriptionLabe2 = tk.Label(frame1,text="Cell-IN", font="Helvetica 10 bold", fg="#ff6633")
-descriptionLabe2.grid(column=2, row=0,padx=2 ,pady=5)
+descriptionLabe2.grid(column=2, row=0, padx=15, pady=0, sticky="s")
 
 descriptionLabe3 = tk.Label(frame1,text="Cell-OUT", font="Helvetica 10 bold", fg="#ff9933")
-descriptionLabe3.grid(column=3, row=0,padx=2 ,pady=5)
+descriptionLabe3.grid(column=3, row=0, padx=15, pady=0, sticky="s")
 
 descriptionLabe4 = tk.Label(frame1,text="Map 1")
-descriptionLabe4.grid(column=0, row=1,padx=10 ,pady=2)
+descriptionLabe4.grid(column=0, row=1, padx=15, pady=0, sticky="s")
 
 descriptionLabe5 = tk.Label(frame1,text="Map 2")
-descriptionLabe5.grid(column=0, row=2,padx=10 ,pady=2)
+descriptionLabe5.grid(column=0, row=2, padx=15, pady=0, sticky="s")
 
 # == Description Labes == Frame 2
 
@@ -141,12 +155,24 @@ copyButton1 = tk.Button(frame2,text="Copy Trigger", command=frame2Copy)
 copyButton1.grid(column=3, row=3, sticky='e')
 
 # ======================================================================
+# == Clear Button == Frame 1
+
+clearButton1 = tk.Button(frame1,text="Clear all", command=F1clearText)
+clearButton1.grid(column=4, row=0, padx=15, pady=5, sticky='s')
+
+# == Clear Button == Frame 1
+
+clearButton2 = tk.Button(frame2,text="Clear all", command=F2clearText)
+clearButton2.grid(column=4, row=0, padx=15, pady=5, sticky='s')
+
+# ======================================================================
 # == Trigger Commands == Frame 1
 
 triggercommand1 = tk.Label(frame1, text="empty")
 triggercommand2 = tk.Label(frame1, text="empty")
 
 # == Trigger Commands == Frame 2
+
 triggercommand3 = tk.Label(frame2, text="empty")
 
 # ======================================================================
